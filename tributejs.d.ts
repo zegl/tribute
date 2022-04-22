@@ -89,6 +89,7 @@ export type TributeCollection<T extends {}> = {
 
 export type TributeOptions<T> =
   | TributeCollection<T>
+  | { collection: Array<TributeCollection> }
   | {
       // pass an array of config objects
       collection: Array<TributeCollection<{ [key: string]: any }>>;
